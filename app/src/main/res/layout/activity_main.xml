@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/mainactivitybackground"
+    >
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="270dp"
+        >
+
+        <Button android:text="魔灵管理"
+            android:id="@+id/molingguanli"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@drawable/button_selector"
+            />
+        <Button android:text="符文管理"
+            android:id="@+id/fuwenguanli"
+            android:layout_width="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_selector"
+            android:layout_below="@+id/molingguanli"
+            />
+        <Button android:text="符文模拟"
+            android:id="@+id/fuwenmoni"
+            android:layout_width="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_selector"
+            android:layout_below="@+id/fuwenguanli"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
