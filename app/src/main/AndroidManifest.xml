@@ -42,6 +42,12 @@
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
+        <activity
+            android:name=".ui.fuwenZhanshi"
+            android:label="@string/title_activity_fuwen_zhanshi"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

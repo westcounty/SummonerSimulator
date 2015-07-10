@@ -163,6 +163,7 @@
                 android:layout_height="36dp"
                 android:background="@drawable/button_selector_2"
                 android:text="添加"
+                android:textColor="#2a170c"
                 android:textAlignment="center"
                 />
         </LinearLayout>
@@ -178,6 +179,7 @@
                 android:layout_height="36dp"
                 android:background="@drawable/button_selector_2"
                 android:text="删除"
+                android:textColor="#2a170c"
                 android:textAlignment="center"
                 />
         </LinearLayout>
@@ -193,6 +195,7 @@
                 android:layout_height="36dp"
                 android:background="@drawable/button_selector_2"
                 android:text="修改"
+                android:textColor="#2a170c"
                 android:textAlignment="center"
 
                 />

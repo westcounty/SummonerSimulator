@@ -1,40 +1,26 @@
 package cn.com.geeeeker.field.summonersimulator.ui;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import cn.com.geeeeker.field.summonersimulator.R;
 
-public class fuwenMoni extends Activity {
-
-    Button xiayibu_fuwenmoni;
+public class fuwenZhanshi extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fuwen_moni);
-
-        //魔灵管理按钮动作
-        xiayibu_fuwenmoni = (Button) findViewById(R.id.xiayibu_fuwenmoni);
-        xiayibu_fuwenmoni.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(fuwenMoni.this, moshiXuanze.class));
-            }
-        });
+        setContentView(R.layout.activity_fuwen_zhanshi);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_fuwen_moni, menu);
+        getMenuInflater().inflate(R.menu.menu_fuwen_zhanshi, menu);
         return true;
     }
 

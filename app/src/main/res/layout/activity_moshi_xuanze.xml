@@ -1,10 +1,108 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/background_general"
     tools:context="cn.com.geeeeker.field.summonersimulator.ui.moshiXuanze">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+            <Button
+                android:layout_width="232dp"
+                android:layout_height="48dp"
+                android:background="@drawable/button_selector_3"
+                android:text="最优攻击符文"
+                android:textColor="#e8cf9f"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <Button
+                android:layout_width="232dp"
+                android:layout_height="48dp"
+                android:background="@drawable/button_selector_3"
+                android:text="最优体防符文"
+                android:textColor="#e8cf9f"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <Button
+                android:layout_width="232dp"
+                android:layout_height="48dp"
+                android:background="@drawable/button_selector_3"
+                android:text="最优速度符文"
+                android:textColor="#e8cf9f"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_margin="8dp">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <Button
+                android:layout_width="232dp"
+                android:layout_height="48dp"
+                android:background="@drawable/button_selector_3"
+                android:text="自由组合符文"
+                android:textColor="#e8cf9f"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    //底部按钮
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:background="@drawable/button_selector_2"
+                android:text="返回"
+                android:textColor="#2a170c"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>

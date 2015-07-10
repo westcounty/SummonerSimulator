@@ -8,5 +8,6 @@
     <string name="title_activity_add_fuwen">符文管理</string>
     <string name="title_activity_fuwen_moni">符文模拟</string>
     <string name="title_activity_moshi_xuanze">模式选择</string>
+    <string name="title_activity_fuwen_zhanshi">符文展示</string>
 
 </resources>
