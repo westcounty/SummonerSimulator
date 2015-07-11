@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 import cn.com.geeeeker.field.summonersimulator.R;
+import cn.com.geeeeker.field.summonersimulator.data.Helper;
 
 public class addMoling extends Activity {
 
@@ -32,9 +34,20 @@ public class addMoling extends Activity {
 
     private void initMolingData() {
         //读取魔灵数据，若没有则创建空数据。
-        // TODO
-        //根据魔灵数据创建ListView显示信息
-        // TODO
+        Helper helper = new Helper(addMoling.this);
+        try{
+            helper.readSer("monster.ser");
+            //根据魔灵数据创建ListView显示信息
+            // TODO
+
+            Toast.makeText(getApplicationContext(), "魔灵信息读取成功",
+                    Toast.LENGTH_SHORT).show();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), "文件读取失败",
+                    Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 
