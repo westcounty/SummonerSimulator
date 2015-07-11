@@ -1,8 +1,113 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/monijieguo"
     tools:context="cn.com.geeeeker.field.summonersimulator.ui.fuwenZhanshi">
 
+    //上方的六个符文
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    //第一行
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+           //位置6
+        <LinearLayout
+            android:layout_width="146dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:layout_height="88dp">
+
+            //显示七行内容的LinerLayout
+
+            //符文名称
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                </LinearLayout>
+            //主属性
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            //前缀属性
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            //属性1
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            //属性2
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            //属性3
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            //属性4
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+        //位置1
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    //底部按钮
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/fanhui_monijieguo"
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:background="@drawable/button_selector_2"
+                android:text="返回"
+                android:textColor="#2a170c"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
