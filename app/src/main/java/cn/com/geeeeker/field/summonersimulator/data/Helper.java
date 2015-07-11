@@ -20,13 +20,12 @@ public class Helper {
 
     public Helper(){}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public ArrayList<Object> readSer(String fileName)  {
 		
 		ArrayList o = new ArrayList();
 
 		try {
-			FileInputStream fileStream = new FileInputStream(fileName);
+			FileInputStream fileStream = context_this.openFileInput(fileName);
 			ObjectInputStream os = new ObjectInputStream(fileStream);
 			o =  (ArrayList) os.readObject();
 			os.close();
@@ -45,7 +44,7 @@ public class Helper {
 		return o;
 	}
 
-	@SuppressWarnings("rawtypes")
+
 	public boolean saveSer(String fileName, ArrayList o) {
 		try {
 			FileOutputStream fileStream = context_this.openFileOutput(fileName,Context.MODE_APPEND);

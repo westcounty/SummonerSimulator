@@ -22,6 +22,8 @@ public class addMoling extends Activity {
 
         initMolingData();
 
+
+
         //添加魔灵
         tianjia_molingguanli= (Button)findViewById(R.id.tianjia_molingguanli);
 
@@ -49,6 +51,7 @@ public class addMoling extends Activity {
         }
 
     }
+
 
 
     @Override
