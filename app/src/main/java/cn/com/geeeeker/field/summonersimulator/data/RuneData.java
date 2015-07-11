@@ -1,5 +1,7 @@
 package cn.com.geeeeker.field.summonersimulator.data;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 
 import cn.com.geeeeker.field.summonersimulator.model.Rune;
@@ -12,8 +14,15 @@ public class RuneData {
 	 * SaveMonsterInfo(monsterinfo) ReadMonsterInfoList()
 	 * SaveMonsterInfoList(monsterinfolist)
 	 */
-	
-	private Helper helper = new Helper();
+    Context context_this;
+
+    public RuneData(Context context){
+
+        context_this=context;
+
+    }
+
+	private Helper helper = new Helper(context_this);
 	
 	public void AddRune(Rune rune){
 		ArrayList<Rune> list = this.ReadRuneList();

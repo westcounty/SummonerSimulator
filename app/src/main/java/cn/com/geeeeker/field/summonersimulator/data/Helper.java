@@ -18,7 +18,7 @@ public class Helper {
         context_this=context;
     }
 
-    public Helper(){}
+
 
 	public ArrayList<Object> readSer(String fileName)  {
 		

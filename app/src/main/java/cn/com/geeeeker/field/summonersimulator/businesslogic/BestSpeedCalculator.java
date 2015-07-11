@@ -1,21 +1,33 @@
 package cn.com.geeeeker.field.summonersimulator.businesslogic;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 
-import cn.com.geeeeker.field.summonersimulator.model.MonsterInfo;
-import cn.com.geeeeker.field.summonersimulator.model.Rune;
 import cn.com.geeeeker.field.summonersimulator.data.MonsterInfoData;
 import cn.com.geeeeker.field.summonersimulator.data.RuneData;
+import cn.com.geeeeker.field.summonersimulator.model.MonsterInfo;
+import cn.com.geeeeker.field.summonersimulator.model.Rune;
 
 public class BestSpeedCalculator {
-	private RuneData rd = new RuneData();
+
+    Context context_this;
+
+    public BestSpeedCalculator(Context context){
+
+        context_this=context;
+
+    }
+
+
+	private RuneData rd = new RuneData(context_this);
 	private RuneSuitCalculator rsc = new RuneSuitCalculator();
 	private SingleRuneCalculator src = new SingleRuneCalculator();
 	
 	public int[] calculate(String id){
 		
 		ArrayList<Rune> runelist = rd.ReadRuneList();
-		MonsterInfoData mid = new MonsterInfoData();
+		MonsterInfoData mid = new MonsterInfoData(context_this);
 		MonsterInfo monsterinfo = mid.ReadMonsterInfo(id);
 		int rune1_count = 0, rune2_count = 0, rune3_count = 0, rune4_count = 0, rune5_count = 0, rune6_count = 0;
 		for (Rune r : runelist) {
@@ -171,7 +183,5 @@ public class BestSpeedCalculator {
 		
 	}
 	
-	public static void main(String args[]){
-		new BestSpeedCalculator().calculate("扎伊洛斯火");
-	}
+
 }

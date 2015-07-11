@@ -1,12 +1,24 @@
 package cn.com.geeeeker.field.summonersimulator.data;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 
 import cn.com.geeeeker.field.summonersimulator.model.MonsterInfo;
 
 public class MonsterInfoData {
 
-	private Helper helper = new Helper();
+    Context context_this;
+
+    public MonsterInfoData(Context context){
+
+        context_this=context;
+
+    }
+
+    private Helper helper = new Helper(context_this);
+
+
 
 	public MonsterInfo ReadMonsterInfo(String id) {
 		// ��id��ȡħ�����
