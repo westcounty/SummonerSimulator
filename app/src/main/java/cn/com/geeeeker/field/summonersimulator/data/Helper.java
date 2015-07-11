@@ -46,8 +46,13 @@ public class Helper {
 
 
 	public boolean saveSer(String fileName, ArrayList o) {
+        ArrayList tmp = readSer(fileName);
+        for (int i=0;i<tmp.size();i++){
+            o.add(tmp.get(i));
+        }
+
 		try {
-			FileOutputStream fileStream = context_this.openFileOutput(fileName,Context.MODE_APPEND);
+			FileOutputStream fileStream = context_this.openFileOutput(fileName,Context.MODE_PRIVATE);
 			ObjectOutputStream os = new ObjectOutputStream(fileStream);
 			os.writeObject(o);
 			os.close();

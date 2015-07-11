@@ -10,6 +10,7 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +25,7 @@ public class addMoling extends Activity {
     ListView molinglist;
     Button tianjia_molingguanli,shanchu_molingguanli,xiugai_molingguanli;
     Controller controller = new Controller(addMoling.this);
-
+    Helper helper = new Helper(addMoling.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,16 +53,24 @@ public class addMoling extends Activity {
         try{
 
             Monster monster = new Monster("查燚斐","屌",4);
+            Monster monster2 = new Monster("岳书汉","帅",4);
             ArrayList tmp = new ArrayList();
             tmp.add(monster);
+            tmp.add(monster2);
             helper.saveSer("monster.ser",tmp);
 
-            helper.readSer("monster.ser");
+            tmp=helper.readSer("monster.ser");
+
+            Monster tmpMon = (Monster)tmp.get(0);
+
             //根据魔灵数据创建ListView显示信息
             molinglist = (ListView)findViewById(R.id.list_molingguanli);
             MonsterData molingdata =  new MonsterData(addMoling.this);
-            List<Map<String, Object>> molingxinxi = molingdata.getAllMolingData(molingdata.ReadMonsterList());
-            SimpleAdapter molingAdapter  = new SimpleAdapter(this,molingxinxi,R.layout.moling_list,new String[] {"molingmingcheng","molingshuxing","molingxingji"},new int[] {R.id.molingliebiao_name,R.id.molingliebiao_shuxing,R.id.molingliebiao_xingji});
+            ArrayList tmp_molingxinxi= readMonsterList();
+            List<Map<String, Object>> molingxinxi = getAllMolingData(tmp_molingxinxi);
+            SimpleAdapter molingAdapter  = new SimpleAdapter(this,molingxinxi,R.layout.moling_list,new String[] {"molingmingcheng",
+                    "molingshuxing","molingxingji"},
+                    new int[] {R.id.molingliebiao_name,R.id.molingliebiao_shuxing,R.id.molingliebiao_xingji});
             molinglist.setAdapter(molingAdapter);
 
             Toast.makeText(getApplicationContext(), "魔灵信息加载成功",  Toast.LENGTH_SHORT).show();
@@ -96,4 +105,44 @@ public class addMoling extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    //将读取到的所有魔灵信息包装为Adapter需要的map数组
+    public List<Map<String, Object>> getAllMolingData(ArrayList raw){
+        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        Map<String, Object> map ;
+        Monster o;
+        for (int i=0;i<raw.size();i++){
+            o = (Monster)raw.get(i);
+            map=new HashMap<String, Object>();
+            map.put("molingmingcheng",o.getMonstername());
+            map.put("molingshuxing",o.getAttribute());
+            map.put("molingxingji",o.getStar());
+            list.add(map);
+        }
+
+        return  list;
+    }
+
+
+
+
+    public ArrayList<Monster> readMonsterList() {
+        // 读取所有魔灵信息
+        ArrayList<Object> readlist = new ArrayList<Object>();
+        readlist = helper.readSer("monster.ser");
+
+        ArrayList<Monster> resultlist = new ArrayList<Monster>();
+        for (Object o : readlist) {
+            Monster m = (Monster) o;
+            resultlist.add(m);
+        }
+
+        return resultlist;
+
+    }
+
+
+
+
 }
