@@ -36,6 +36,7 @@
                 android:layout_height="48dp"
                 android:background="@drawable/button_selector_3"
                 android:text="最优体防符文"
+                android:id="@+id/zuiyoutifang"
                 android:textColor="#e8cf9f"
                 />
 
@@ -50,6 +51,7 @@
                 android:layout_height="48dp"
                 android:background="@drawable/button_selector_3"
                 android:text="最优速度符文"
+                android:id="@+id/zuiyousudu"
                 android:textColor="#e8cf9f"
                 />
         </LinearLayout>
@@ -70,6 +72,7 @@
                 android:background="@drawable/button_selector_3"
                 android:text="自由组合符文"
                 android:textColor="#e8cf9f"
+                android:id="@+id/ziyouzuhe"
                 />
 
         </LinearLayout>
@@ -98,6 +101,7 @@
                 android:background="@drawable/button_selector_2"
                 android:text="返回"
                 android:textColor="#2a170c"
+                android:id="@+id/fanhui_moshixuanze"
                 android:textAlignment="center"
                 />
         </LinearLayout>

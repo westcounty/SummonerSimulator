@@ -1,22 +1,40 @@
 package cn.com.geeeeker.field.summonersimulator.ui;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import cn.com.geeeeker.field.summonersimulator.R;
 
 public class addMoling extends Activity {
+
+
+    Button tianjia_molingguanli,shanchu_molingguanli,xiugai_molingguanli;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_moling);
 
+        initMolingData();
 
+        //添加魔灵
+        tianjia_molingguanli= (Button)findViewById(R.id.tianjia_molingguanli);
 
+        //修改魔灵
+        xiugai_molingguanli= (Button)findViewById(R.id.xiugai_molingguanli);
+
+        //删除魔灵
+        shanchu_molingguanli= (Button)findViewById(R.id.shanchu_molingguanli);
+    }
+
+    private void initMolingData() {
+        //读取魔灵数据，若没有则创建空数据。
+        // TODO
+        //根据魔灵数据创建ListView显示信息
+        // TODO
     }
 
 

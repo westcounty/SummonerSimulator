@@ -11,6 +11,7 @@
             android:name=".ui.MainActivity"
             android:label="魔灵召唤符文模拟器"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +21,7 @@
         </activity>
         <activity
             android:name=".ui.addMoling"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_add_moling"
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
@@ -28,23 +30,27 @@
             android:name=".ui.addFuwen"
             android:label="@string/title_activity_add_fuwen"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name=".ui.fuwenMoni"
             android:label="@string/title_activity_fuwen_moni"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name=".ui.moshiXuanze"
             android:label="@string/title_activity_moshi_xuanze"
+            android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name=".ui.fuwenZhanshi"
             android:label="@string/title_activity_fuwen_zhanshi"
+            android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>

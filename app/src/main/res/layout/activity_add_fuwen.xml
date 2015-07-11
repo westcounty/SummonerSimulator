@@ -161,6 +161,7 @@
             <Button
                 android:layout_width="72dp"
                 android:layout_height="36dp"
+                android:id="@+id/tianjia_fuwenguanli"
                 android:background="@drawable/button_selector_2"
                 android:text="添加"
                 android:textColor="#2a170c"
@@ -179,6 +180,7 @@
                 android:layout_height="36dp"
                 android:background="@drawable/button_selector_2"
                 android:text="删除"
+                android:id="@+id/shanchu_fuwenguanli"
                 android:textColor="#2a170c"
                 android:textAlignment="center"
                 />
@@ -195,6 +197,7 @@
                 android:layout_height="36dp"
                 android:background="@drawable/button_selector_2"
                 android:text="修改"
+                android:id="@+id/xiugai_fuwenguanli"
                 android:textColor="#2a170c"
                 android:textAlignment="center"
 
