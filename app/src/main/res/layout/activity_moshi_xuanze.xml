@@ -21,6 +21,7 @@
                 android:layout_width="232dp"
                 android:layout_height="48dp"
                 android:background="@drawable/button_selector_3"
+                android:id="@+id/zuiyougongji"
                 android:text="最优攻击符文"
                 android:textColor="#e8cf9f"
                 />

@@ -1,20 +1,34 @@
 package cn.com.geeeeker.field.summonersimulator.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import cn.com.geeeeker.field.summonersimulator.R;
 
 public class moshiXuanze extends Activity {
 
+    Button zuiyougongji;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_moshi_xuanze);
-    }
+
+        //最优攻击按钮动作
+        zuiyougongji=(Button)findViewById(R.id.zuiyougongji);
+        zuiyougongji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(moshiXuanze.this, fuwenZhanshi.class));
+            }
+        });
+   }
 
 
     @Override
