@@ -2,30 +2,51 @@ package cn.com.geeeeker.field.summonersimulator.ui;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import cn.com.geeeeker.field.summonersimulator.R;
+import cn.com.geeeeker.field.summonersimulator.controller.Controller;
+import cn.com.geeeeker.field.summonersimulator.data.Helper;
 
 public class fuwenMoni extends Activity {
 
     Button xiayibu_fuwenmoni;
+
+
+    ListView molinglist;
+    Button tianjia_molingguanli,shanchu_molingguanli,xiugai_molingguanli;
+    Controller controller = new Controller(fuwenMoni.this);
+    Helper helper = new Helper(fuwenMoni.this);
+    int cur_pos = 0; //行指针
+    TextView xiaoguomingzhong_molingguanli,xiaoguodikang_molingguanli,baojishanghai_molingguanli,baojilv_molingguanli,gongjisudu_molingguanli,fangyuli_molingguanli,gongjili_molingguanli,tili_molingguanli;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fuwen_moni);
 
-        //魔灵管理按钮动作
+
+
+
+
+
+
+
+
+        //下一步按钮动作
         xiayibu_fuwenmoni = (Button) findViewById(R.id.xiayibu_fuwenmoni);
         xiayibu_fuwenmoni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(fuwenMoni.this, moshiXuanze.class));
+                Intent intent  =new Intent(fuwenMoni.this, moshiXuanze.class);
+                startActivity(intent);
             }
         });
     }
