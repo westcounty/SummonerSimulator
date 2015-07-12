@@ -33,7 +33,7 @@ public class Helper {
 //			新建一个文件
             FileOutputStream fileos = null;
             try{
-                fileos=context_this.openFileOutput(fileName, Context.MODE_APPEND);
+                fileos=context_this.openFileOutput(fileName, Context.MODE_PRIVATE);
             }catch(FileNotFoundException f){
                 Log.e("FileNotFoundException", "can't create FileOutputStream");
             }

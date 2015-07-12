@@ -121,7 +121,7 @@ public class MonsterData {
 			Object o = (Object) m;
 			savelist.add(o);
 		}
-		helper.saveSer("data/monster.ser", savelist);
+		helper.saveSer("monster.ser", savelist);
 	}
 
 	public void DeleteMonster(String id) {
