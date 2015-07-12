@@ -251,7 +251,8 @@ public class fuwenZhanshi extends Activity {
         SingleRuneCalculator src = new SingleRuneCalculator();
         RuneSuitCalculator rsc = new RuneSuitCalculator();
 
-        int[] result = bestAttackCalculator.calculate("岳书汉帅");
+        int[] result = bestAttackCalculator.calculate("莱卡火");
+//        int[] result={1,2,3,4,5,6};
         System.out.println("月叔叔好帅");
         monsterinfo_show= new MonsterInfo("莱卡火",11040,834,571,100,15,50,40,0);
 
@@ -268,12 +269,22 @@ public class fuwenZhanshi extends Activity {
 
 
         RuneData rd = new RuneData(fuwenZhanshi.this);
-        ArrayList<Rune> alllist = rd.ReadRuneList();
+
+        Helper helper =new Helper(fuwenZhanshi.this);
+        ArrayList tmpArray  = helper.readSer("Rune.ser");
+        ArrayList<Rune> alllist = new ArrayList<Rune>();
+        Rune r;
+        for(Object o : tmpArray){
+            r=(Rune)o;
+            alllist.add(r);
+        }
+
+        System.out.println("读到了"+alllist.size());
         Rune[] rlist = new Rune[6];
-        for(Rune r:alllist){
+        for(Rune hehe:alllist){
             for(int i = 0;i<6;i++){
-                if(r.getRuneid()==result[i]){
-                    rlist[i]=r;
+                if(hehe.getRuneid()==result[i]){
+                    rlist[i]=hehe;
                     break;
                 }
             }
@@ -285,7 +296,7 @@ public class fuwenZhanshi extends Activity {
         rune_5_name_view.setText(rlist[4].getName()+"");
         rune_6_name_view.setText(rlist[5].getName()+"");
 
-        rune_1_main_type_view.setText(rlist[1].getMainType()+"");
+        rune_1_main_type_view.setText(rlist[0].getMainType()+"");
         rune_2_main_type_view.setText(rlist[1].getMainType()+"");
         rune_3_main_type_view.setText(rlist[2].getMainType()+"");
         rune_4_main_type_view.setText(rlist[3].getMainType()+"");
@@ -402,6 +413,27 @@ public class fuwenZhanshi extends Activity {
 
         totalResult.add(rsc_result);
 
+        monster_hp_view.setText(monsterinfo_show.getHp()+"+"+totalResult.getHp()+"="+(monsterinfo_show.getHp()+totalResult.getHp()));
+        monster_attack_view.setText(monsterinfo_show.getAttack()+"+"+totalResult.getAttack()+"="+(monsterinfo_show.getAttack()+totalResult.getAttack()));
+        monster_defence_view.setText(monsterinfo_show.getDefence()+"+"+totalResult.getDefence()+"="+(monsterinfo_show.getDefence()+totalResult.getDefence()));
+        monster_speed_view.setText(monsterinfo_show.getSpeed()+"+"+totalResult.getSpeed()+"="+(monsterinfo_show.getSpeed()+totalResult.getSpeed()));
+        monster_cri_rate_view.setText(monsterinfo_show.getCri_rate()+"+"+totalResult.getCri_rate()+"="+(monsterinfo_show.getCri_rate()+totalResult.getCri_rate()));
+        monster_cri_dmg_view.setText(monsterinfo_show.getCri_dmg()+"+"+totalResult.getCri_dmg()+"="+(monsterinfo_show.getCri_dmg()+totalResult.getCri_dmg()));
+        monster_resistance_view.setText(monsterinfo_show.getResistance()+"+"+totalResult.getResistance()+"="+(monsterinfo_show.getResistance()+totalResult.getResistance()));
+        monster_accuracy_view.setText(monsterinfo_show.getAccuracy()+"+"+totalResult.getAccuracy()+"="+(monsterinfo_show.getAccuracy()+totalResult.getAccuracy()));
+
+
+        Monster monster4 = new Monster("莱卡","火",6);
+
+        monster_name_view.setText(monster4.getMonstername());
+        monster_attribute_view.setText(monster4.getAttribute());
+        monster_star_view.setText(monster4.getStar()+"");
+
+        totalResult.add(monsterinfo_show);
+        int equalHp = (int) (totalResult.getHp()/((333.0)/(333+totalResult.getDefence())));
+        int equalAttack = (int) (totalResult.getAttack()*((100-totalResult.getCri_rate())/100.0+totalResult.getCri_rate()*(100+totalResult.getCri_dmg())/100.0/100.0));
+        equal_attack_view.setText(""+equalAttack);
+        equal_hp_view.setText(""+equalHp);
 
 
 

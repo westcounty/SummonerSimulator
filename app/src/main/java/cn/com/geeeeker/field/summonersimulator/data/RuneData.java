@@ -74,7 +74,7 @@ public class RuneData {
 	
 	public ArrayList<Rune> ReadRuneList(){
 		ArrayList<Object> readlist = new ArrayList<Object>();
-		readlist = helper.readSer("data/rune.ser");
+		readlist = helper.readSer("Rune.ser");
 		
 		ArrayList<Rune> resultlist = new ArrayList<Rune>();
 		
@@ -92,7 +92,7 @@ public class RuneData {
 			Object o = (Object) r;
 			savelist.add(o);
 		}
-		helper.saveSer("data/rune.ser", savelist);
+		helper.saveSer("Rune.ser", savelist);
 	}
 	
 	public void DeleteRune(int runeid){

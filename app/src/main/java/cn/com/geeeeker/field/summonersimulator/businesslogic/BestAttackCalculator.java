@@ -4,10 +4,11 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
-import cn.com.geeeeker.field.summonersimulator.model.MonsterInfo;
-import cn.com.geeeeker.field.summonersimulator.model.Rune;
+import cn.com.geeeeker.field.summonersimulator.data.Helper;
 import cn.com.geeeeker.field.summonersimulator.data.MonsterInfoData;
 import cn.com.geeeeker.field.summonersimulator.data.RuneData;
+import cn.com.geeeeker.field.summonersimulator.model.MonsterInfo;
+import cn.com.geeeeker.field.summonersimulator.model.Rune;
 
 public class BestAttackCalculator {
     //DPS计算公式：攻击力*（暴击率*（100%+爆伤）+（1-暴击率））
@@ -33,7 +34,23 @@ public class BestAttackCalculator {
 		
 		ArrayList<Rune> runelist = rd.ReadRuneList();
 		MonsterInfoData mid = new MonsterInfoData(context_this);
-		MonsterInfo monsterinfo = mid.ReadMonsterInfo(id);
+		MonsterInfo monsterinfo= new MonsterInfo();
+
+        Helper helper =new Helper(context_this);
+        ArrayList tmpArray  = helper.readSer("monsterinfo.ser");
+
+        MonsterInfo rr;
+        for(Object o : tmpArray){
+            rr= (MonsterInfo)o;
+            if ((rr.getId().equals(id))){
+                monsterinfo=rr;
+            }
+        }
+
+
+
+        System.out.println(monsterinfo.getId());
+
 		int rune1_count = 0, rune2_count = 0, rune3_count = 0, rune4_count = 0, rune5_count = 0, rune6_count = 0;
 		for (Rune r : runelist) {
 			int location = r.getLocation();
@@ -70,8 +87,8 @@ public class BestAttackCalculator {
 		rune4_showlist = new Rune[rune4_count];
 		rune5_showlist = new Rune[rune5_count];
 		rune6_showlist = new Rune[rune6_count];
-		
-		
+
+        System.out.println(rune6_showlist[0]);
 		int rune1_i = 0, rune2_i = 0, rune3_i = 0, rune4_i = 0, rune5_i = 0, rune6_i = 0;
 		for (int index=0;index<runelist.size();index++) {
 			Rune r = runelist.get(index);
