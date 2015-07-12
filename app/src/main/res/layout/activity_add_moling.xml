@@ -21,7 +21,7 @@
         android:layout_marginTop="44dp"
         android:gravity="center"
         android:orientation="vertical">
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:textColor="#ff6400"
@@ -30,7 +30,7 @@
             android:textStyle="bold"
             android:paddingTop="20dp"
             />
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:textColor="#ff6400"
@@ -39,7 +39,7 @@
             android:textStyle="bold"
             android:paddingTop="20dp"
             />
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:textColor="#ff6400"
@@ -48,7 +48,7 @@
             android:textStyle="bold"
             android:paddingTop="20dp"
             />
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:textColor="#ff6400"
@@ -57,7 +57,7 @@
             android:textStyle="bold"
             android:paddingTop="20dp"
             />
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:textColor="#ff6400"
@@ -66,7 +66,7 @@
             android:textStyle="bold"
             android:paddingTop="20dp"
             />
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:textColor="#ff6400"
@@ -75,7 +75,7 @@
             android:paddingTop="20dp"
             android:id="@+id/baojishanghai_molingguanli"
             />
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:textColor="#ff6400"
@@ -84,7 +84,7 @@
             android:id="@+id/xiaoguodikang_molingguanli"
             android:paddingTop="20dp"
             />
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:textColor="#ff6400"
