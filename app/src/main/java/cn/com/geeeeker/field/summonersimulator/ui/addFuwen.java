@@ -33,7 +33,7 @@ public class addFuwen extends Activity {
 
     Helper helper = new Helper(addFuwen.this);
 
-    int cur_pos = 0; //行指针
+    int cur_pos_2 = 0; //行指针
 
     TextView zhushuxing_fuwenguanli,zhushuxing_zhi_fuwenguanli,qianzhuishuxing_fuwenguanli,qianzhuishuxing_zhi_fuwenguanli,fushuxing1_fuwenguanli,fushuxing1_zhi_fuwenguanli,fushuxing2_fuwenguanli,fushuxing2_zhi_fuwenguanli,fushuxing3_fuwenguanli,fushuxing3_zhi_fuwenguanli,fushuxing4_fuwenguanli,fushuxing4_zhi_fuwenguanli;
 
@@ -83,28 +83,28 @@ public class addFuwen extends Activity {
         fushuxing4_zhi_fuwenguanli=(TextView)findViewById(R.id.fushuxing4_zhi_fuwenguanli);
 
         try{
-            Rune rune1 = new Rune("1","迅速",1,"攻击力",135,"",0,"体力%",6,"攻击速度",5,"暴击率%",8,"攻击力%",25);
-            Rune rune2 = new Rune("2","迅速",2,"攻击速度",31,"",0,"攻击速度",3,"暴击伤害%",4,"体力%",4,"效果命中%",5);
-            Rune rune3 = new Rune("3","集中",3,"防御力",118,"体力",206,"暴击率%",18,"效果抵抗%",7,"防御力%",15,"攻击速度",5);
-            Rune rune4 = new Rune("4","迅速",4,"攻击力%",37,"",0,"暴击伤害%",12,"攻击速度",3,"攻击力",14,"体力",179);
-            Rune rune5 = new Rune("6","迅速",6,"攻击力%",37,"",0,"暴击率%",8,"攻击力",23,"体力",133,"体力%",6);
-            Rune rune6 = new Rune("1","猛攻",1,"攻击力",136,"",0,"体力%",6,"攻击速度",5,"暴击率%",8,"攻击力%",25);
-            Rune rune7 = new Rune("2","猛攻",2,"攻击力%",31,"",0,"攻击速度",3,"暴击伤害%",4,"体力%",4,"效果命中%",5);
-            Rune rune8 = new Rune("3","集中",3,"防御力",118,"体力",207,"暴击率%",18,"效果抵抗%",7,"防御力%",15,"攻击速度",5);
-            Rune rune9 = new Rune("4","猛攻",4,"攻击力%",37,"",0,"暴击伤害%",12,"攻击速度",3,"攻击力",14,"体力",179);
-            Rune rune10 = new Rune("光比1","集中",1,"攻击力",70,"",0,"体力%",7,"暴击率%",10,"效果命中%",12,"",0);
-            Rune rune11 = new Rune("光比2","暴走",2,"体力%",47,"",0,"暴击伤害%",4,"攻击力%",12,"防御力",29,"",0);
-            Rune rune12 = new Rune("光比3","集中",3,"防御力",118,"",0,"防御力%",8,"暴击率%",13,"体力",366,"效果命中%",5);
-            Rune rune13 = new Rune("光比4","守护",4,"暴击率%",58,"效果命中%",7,"效果抵抗%",16,"攻击速度",6,"攻击力",14,"防御力",20);
-            Rune rune14 = new Rune("光比5","暴走",5,"体力",1530,"",0,"暴击率%",9,"效果抵抗%",6,"攻击力",8,"",0);
-            Rune rune15 = new Rune("光比6","暴走",6,"体力%",47,"攻击速度",4,"攻击力",31,"防御力",17,"防御力%",8,"",0);
-            Rune rune16 = new Rune("光比1-暴113","暴走",1,"攻击力",64,"",0,"暴击率%",9,"体力%",6,"攻击力%",6,"",0);
-            Rune rune17 = new Rune("祝福1","祝福",1,"攻击力%",23,"防御力",2,"体力%",3,"体力",23,"效果抵抗%",5,"效果命中%",5);
-            Rune rune18 = new Rune("祝福2","祝福",2,"攻击速度",54,"效果命中%",5,"防御力%",23,"攻击力",89,"暴击率%",23,"效果抵抗%",11);
-            Rune rune19 = new Rune("祝福3","祝福",3,"防御力",23,"效果抵抗%",20,"体力%",56,"防御力%",45,"暴击伤害%",50,"效果命中%",10);
-            Rune rune20 = new Rune("祝福4","祝福",4,"效果抵抗%",21,"效果抵抗%",7,"攻击力",12,"体力%",233,"攻击速度",22,"暴击率%",12);
-            Rune rune21 = new Rune("祝福5","祝福",5,"体力",1111,"效果命中%",2,"暴击伤害%",23,"暴击率%",22,"攻击力%",15,"攻击速度",12);
-            Rune rune22 = new Rune("祝福6","祝福",6,"效果抵抗%",12,"体力%",23,"效果抵抗%",12,"攻击力",123,"体力",23,"体力%",23);
+            Rune rune1 = new Rune("1","迅速",1,"攻击力",135,"",0,"体力%",6,"攻击速度",5,"暴击率%",8,"攻击力%",25,1);
+            Rune rune2 = new Rune("2","迅速",2,"攻击速度",31,"",0,"攻击速度",3,"暴击伤害%",4,"体力%",4,"效果命中%",5,2);
+            Rune rune3 = new Rune("3","集中",3,"防御力",118,"体力",206,"暴击率%",18,"效果抵抗%",7,"防御力%",15,"攻击速度",5,3);
+            Rune rune4 = new Rune("4","迅速",4,"攻击力%",37,"",0,"暴击伤害%",12,"攻击速度",3,"攻击力",14,"体力",179,4);
+            Rune rune5 = new Rune("6","迅速",6,"攻击力%",37,"",0,"暴击率%",8,"攻击力",23,"体力",133,"体力%",6,5);
+            Rune rune6 = new Rune("1","猛攻",1,"攻击力",136,"",0,"体力%",6,"攻击速度",5,"暴击率%",8,"攻击力%",25,6);
+            Rune rune7 = new Rune("2","猛攻",2,"攻击力%",31,"",0,"攻击速度",3,"暴击伤害%",4,"体力%",4,"效果命中%",5,7);
+            Rune rune8 = new Rune("3","集中",3,"防御力",118,"体力",207,"暴击率%",18,"效果抵抗%",7,"防御力%",15,"攻击速度",5,8);
+            Rune rune9 = new Rune("4","猛攻",4,"攻击力%",37,"",0,"暴击伤害%",12,"攻击速度",3,"攻击力",14,"体力",179,9);
+            Rune rune10 = new Rune("光比1","集中",1,"攻击力",70,"",0,"体力%",7,"暴击率%",10,"效果命中%",12,"",0,10);
+            Rune rune11 = new Rune("光比2","暴走",2,"体力%",47,"",0,"暴击伤害%",4,"攻击力%",12,"防御力",29,"",0,11);
+            Rune rune12 = new Rune("光比3","集中",3,"防御力",118,"",0,"防御力%",8,"暴击率%",13,"体力",366,"效果命中%",5,12);
+            Rune rune13 = new Rune("光比4","守护",4,"暴击率%",58,"效果命中%",7,"效果抵抗%",16,"攻击速度",6,"攻击力",14,"防御力",20,13);
+            Rune rune14 = new Rune("光比5","暴走",5,"体力",1530,"",0,"暴击率%",9,"效果抵抗%",6,"攻击力",8,"",0,14);
+            Rune rune15 = new Rune("光比6","暴走",6,"体力%",47,"攻击速度",4,"攻击力",31,"防御力",17,"防御力%",8,"",0,15);
+            Rune rune16 = new Rune("光比1-暴113","暴走",1,"攻击力",64,"",0,"暴击率%",9,"体力%",6,"攻击力%",6,"",0,16);
+            Rune rune17 = new Rune("祝福1","祝福",1,"攻击力%",23,"防御力",2,"体力%",3,"体力",23,"效果抵抗%",5,"效果命中%",5,17);
+            Rune rune18 = new Rune("祝福2","祝福",2,"攻击速度",54,"效果命中%",5,"防御力%",23,"攻击力",89,"暴击率%",23,"效果抵抗%",11,18);
+            Rune rune19 = new Rune("祝福3","祝福",3,"防御力",23,"效果抵抗%",20,"体力%",56,"防御力%",45,"暴击伤害%",50,"效果命中%",10,19);
+            Rune rune20 = new Rune("祝福4","祝福",4,"效果抵抗%",21,"效果抵抗%",7,"攻击力",12,"体力%",233,"攻击速度",22,"暴击率%",12,20);
+            Rune rune21 = new Rune("祝福5","祝福",5,"体力",1111,"效果命中%",2,"暴击伤害%",23,"暴击率%",22,"攻击力%",15,"攻击速度",12,21);
+            Rune rune22 = new Rune("祝福6","祝福",6,"效果抵抗%",12,"体力%",23,"效果抵抗%",12,"攻击力",123,"体力",23,"体力%",23,22);
 
             ArrayList<Rune> tmp= new ArrayList<Rune>();
 
@@ -186,7 +186,7 @@ public class addFuwen extends Activity {
                     }
 
                     //取消其他View的选中效果
-                    View past_view= fuwenlist.getChildAt(cur_pos);
+                    View past_view= fuwenlist.getChildAt(cur_pos_2);
                     TextView fuwenliebiao_name_past = (TextView)past_view.findViewById(R.id.fuwenliebiao_name);
                     TextView fuwenliebiao_shuxing_past = (TextView)past_view.findViewById(R.id.fuwenliebiao_shuxing);
                     TextView  fuwenliebiao_xingji_past = (TextView)past_view.findViewById(R.id. fuwenliebiao_xingji);
@@ -220,7 +220,7 @@ public class addFuwen extends Activity {
                         }
 
 
-                        cur_pos = position;
+                        cur_pos_2 = position;
                     }
 
 
@@ -274,7 +274,7 @@ public class addFuwen extends Activity {
             map=new HashMap<String, Object>();
             map.put("fuwenmingcheng",o.getRuneid());
             map.put("fuwenshuxing",o.getName());
-            map.put("fuwenxingji",o.getType());
+            map.put("fuwenxingji",o.getKind());
             list.add(map);
         }
 

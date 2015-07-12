@@ -20,21 +20,23 @@
         android:layout_height="444dp"
         android:layout_marginLeft="207dp"
         android:layout_marginTop="60dp"
-        android:gravity="center"
         android:orientation="vertical">
         
         //主属性
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="78dp"
-            android:orientation="vertical">
+            android:layout_height="65dp"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#543218"
             android:textSize="13sp"
             android:id="@+id/zhushuxing_fuwenguanli"
-            android:paddingTop="20dp"
+           
             />
             <TextView
                 android:layout_width="wrap_content"
@@ -49,7 +51,8 @@
         //前缀属性
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="65dp"
+            android:gravity="center"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -57,7 +60,7 @@
                 android:textColor="#543218"
                 android:textSize="13sp"
                 android:id="@+id/qianzhuishuxing_fuwenguanli"
-                android:paddingTop="20dp"
+               
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -73,7 +76,8 @@
         //属性1
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="65dp"
+            android:gravity="center"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -81,7 +85,7 @@
                 android:textColor="#543218"
                 android:textSize="13sp"
                 android:id="@+id/fushuxing1_fuwenguanli"
-                android:paddingTop="20dp"
+               
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -96,7 +100,8 @@
         //属性2
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:gravity="center"
+            android:layout_height="65dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -104,7 +109,7 @@
                 android:textColor="#543218"
                 android:textSize="13sp"
                 android:id="@+id/fushuxing2_fuwenguanli"
-                android:paddingTop="20dp"
+               
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -120,7 +125,8 @@
         //属性3
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="65dp"
+            android:gravity="center"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -128,7 +134,7 @@
                 android:textColor="#543218"
                 android:textSize="13sp"
                 android:id="@+id/fushuxing3_fuwenguanli"
-                android:paddingTop="20dp"
+               
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -145,6 +151,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:gravity="center"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -152,7 +159,7 @@
                 android:textColor="#543218"
                 android:textSize="13sp"
                 android:id="@+id/fushuxing4_fuwenguanli"
-                android:paddingTop="20dp"
+               
                 />
             <TextView
                 android:layout_width="wrap_content"

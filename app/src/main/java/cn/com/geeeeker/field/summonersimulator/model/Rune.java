@@ -26,7 +26,7 @@ public class Rune implements Serializable{
 	
 	
 	public Rune(String name,String kind, int location,String mainType,int mainValue,String prefType,int prefValue, String t1, int v1, String t2, int v2, String t3,
-			int v3, String t4, int v4) {
+			int v3, String t4, int v4,int runeid) {
 		this.runeid = 0;
 		this.name = name;
 		this.kind = kind;
@@ -43,6 +43,7 @@ public class Rune implements Serializable{
 		this.value_2 = v2;
 		this.value_3 = v3;
 		this.value_4 = v4;
+        this.runeid= runeid;
 	}
 	
 	
