@@ -109,6 +109,11 @@ public class addMoling extends Activity {
             }
             helper.saveSer("monsterinfo.ser",tmpMonsterInfoArray);
 
+
+
+
+
+
             ArrayList content = new ArrayList();
             content=helper.readSer("monster.ser");
 
@@ -118,8 +123,11 @@ public class addMoling extends Activity {
             molinglist = (ListView)findViewById(R.id.list_molingguanli);
 
 
+
             MonsterData molingdata =  new MonsterData(addMoling.this);
+
             ArrayList tmp_molingxinxi= readMonsterList();
+
             List<Map<String, Object>> molingxinxi = getAllMolingData(tmp_molingxinxi);
             final SimpleAdapter molingAdapter  = new SimpleAdapter(this,molingxinxi,R.layout.moling_list,new String[] {"molingmingcheng",
                     "molingshuxing","molingxingji"},
@@ -177,8 +185,8 @@ public class addMoling extends Activity {
             Toast.makeText(getApplicationContext(), "魔灵信息加载成功",  Toast.LENGTH_SHORT).show();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), "魔灵信息读取失败QAQ",
-                    Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "魔灵信息读取失败QAQ",
+//                    Toast.LENGTH_SHORT).show();
         }
 
     }
