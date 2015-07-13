@@ -1,11 +1,102 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fuwenmoni"
+    android:background="@drawable/molingguanli"
     tools:context="cn.com.geeeeker.field.summonerssimulator.ui.fuwenMoni">
 
 
 
+    <ListView
+        android:layout_width="150dp"
+        android:id="@+id/list_molingguanli"
+        android:layout_height="455dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="51dp">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="123dp"
+        android:id="@+id/detaillist_molingguanli"
+        android:layout_height="455dp"
+        android:layout_marginLeft="207dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#ff6400"
+            android:textSize="18sp"
+            android:id="@+id/tili_molingguanli"
+            android:textStyle="bold"
+            android:paddingTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#ff6400"
+            android:textSize="18sp"
+            android:id="@+id/gongjili_molingguanli"
+            android:textStyle="bold"
+            android:paddingTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#ff6400"
+            android:id="@+id/fangyuli_molingguanli"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#ff6400"
+            android:textSize="18sp"
+            android:id="@+id/gongjisudu_molingguanli"
+            android:textStyle="bold"
+            android:paddingTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#ff6400"
+            android:textSize="18sp"
+            android:id="@+id/baojilv_molingguanli"
+            android:textStyle="bold"
+            android:paddingTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#ff6400"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="20dp"
+            android:id="@+id/baojishanghai_molingguanli"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#ff6400"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/xiaoguodikang_molingguanli"
+            android:paddingTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:textColor="#ff6400"
+            android:textSize="18sp"
+            android:id="@+id/xiaoguomingzhong_molingguanli"
+            android:textStyle="bold"
+            android:paddingTop="20dp"
+            />
+
+    </LinearLayout>
 
 
     //底部按钮

@@ -31,7 +31,9 @@ public class BestAttackCalculator {
 	private SingleRuneCalculator src = new SingleRuneCalculator();
 	
 	public int[] calculate(String id){
-		
+
+        System.out.println("要找的魔灵ID"+id);
+
 		ArrayList<Rune> runelist = new ArrayList<Rune>();
 
         Helper helper =new Helper(context_this);
@@ -41,9 +43,9 @@ public class BestAttackCalculator {
             rrr= (Rune)o;
             runelist.add(rrr);
             }
+        System.out.println("读取到"+runelist.size()+"条符文");
 
 
-        System.out.println("runelist size is "+runelist.size());
 
 		MonsterInfoData mid = new MonsterInfoData(context_this);
 		MonsterInfo monsterinfo= new MonsterInfo();

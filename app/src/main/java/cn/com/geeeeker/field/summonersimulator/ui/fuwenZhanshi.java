@@ -134,13 +134,17 @@ public class fuwenZhanshi extends Activity {
     TextView		monster_resistance_view	;
     TextView		monster_accuracy_view	;
 
+    MonsterInfo selectedMonster= new MonsterInfo();
+
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fuwen_zhanshi);
 
-
+         
+        
         rune_1_name_view = (TextView)findViewById(R.id.rune_1_name);
         rune_2_name_view = (TextView)findViewById(R.id.rune_2_name);
         rune_3_name_view = (TextView)findViewById(R.id.rune_3_name);
@@ -246,24 +250,25 @@ public class fuwenZhanshi extends Activity {
         monster_resistance_view = (TextView)findViewById(R.id.monster_resistance);
         monster_accuracy_view = (TextView)findViewById(R.id.monster_accuracy);
 
-
+        selectedMonster= (MonsterInfo)getIntent().getExtras().get("select");
+        System.out.println(selectedMonster.getId());
         //判断是什么计算方式
         String mode = (String)getIntent().getExtras().get("mode");
         int[] result = new int[6];
 
         if(mode.equals("Attack")){
             BestAttackCalculator bestAttackCalculator = new BestAttackCalculator(fuwenZhanshi.this);
-            result = bestAttackCalculator.calculate("莱卡火");
+            result = bestAttackCalculator.calculate(selectedMonster.getId());
         }else if (mode.equals("Speed")){
             BestSpeedCalculator bestSpeedCalculator = new BestSpeedCalculator(fuwenZhanshi.this);
-            result = bestSpeedCalculator.calculate("莱卡火");
+            result = bestSpeedCalculator.calculate(selectedMonster.getId());
 
         }else if (mode.equals("Tank")){
             BestTankCalculator bestTankCalculator = new BestTankCalculator(fuwenZhanshi.this);
-            result = bestTankCalculator.calculate("莱卡火");
+            result = bestTankCalculator.calculate(selectedMonster.getId());
         }else if (mode.equals("Free")){
             BestSpeedCalculator bestSpeedCalculator = new BestSpeedCalculator(fuwenZhanshi.this);
-            result = bestSpeedCalculator.calculate("莱卡火");
+            result = bestSpeedCalculator.calculate(selectedMonster.getId());
 
         }else{
             Toast.makeText(getApplicationContext(), "出错啦QAQ 重启试试QAQ", Toast.LENGTH_SHORT).show();
@@ -279,7 +284,7 @@ public class fuwenZhanshi extends Activity {
 
 //        int[] result={1,2,3,4,5,6};
         System.out.println("月叔叔好帅");
-        monsterinfo_show= new MonsterInfo("莱卡火",11040,834,571,100,15,50,40,0);
+        monsterinfo_show= selectedMonster;
 
 
         RuneData rd = new RuneData(fuwenZhanshi.this);
@@ -437,7 +442,21 @@ public class fuwenZhanshi extends Activity {
         monster_accuracy_view.setText(monsterinfo_show.getAccuracy()+"+"+totalResult.getAccuracy()+"="+(monsterinfo_show.getAccuracy()+totalResult.getAccuracy()));
 
 
-        Monster monster4 = new Monster("莱卡","火",6);
+//        Monster monster4 = new Monster("莱卡","火",6);
+
+
+        Monster monster4= null;
+
+        ArrayList tmpArray2  = helper.readSer("monster.ser");
+        String id = selectedMonster.getId();
+        Monster rr;
+        for(Object o : tmpArray2){
+            rr= (Monster)o;
+            if ((rr.getId().equals(id))){
+                monster4=rr;
+            }
+        }
+
 
         monster_name_view.setText(monster4.getMonstername());
         monster_attribute_view.setText(monster4.getAttribute());

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import cn.com.geeeeker.field.summonersimulator.R;
+import cn.com.geeeeker.field.summonersimulator.model.MonsterInfo;
 
 public class moshiXuanze extends Activity {
 
@@ -25,6 +26,9 @@ public class moshiXuanze extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(moshiXuanze.this, fuwenZhanshi.class);
+                MonsterInfo tmp = (MonsterInfo)getIntent().getExtras().get("select");
+                System.out.println("选择到的符文是："+tmp.getId());
+                intent.putExtra("select",tmp);
                 intent.putExtra("mode","Attack");
                 startActivity(intent);
             }
@@ -37,6 +41,8 @@ public class moshiXuanze extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(moshiXuanze.this, fuwenZhanshi.class);
+                MonsterInfo tmp = (MonsterInfo)getIntent().getExtras().get("select");
+                intent.putExtra("select",tmp);
                 intent.putExtra("mode","Tank");
                 startActivity(intent);
             }
@@ -49,6 +55,8 @@ public class moshiXuanze extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(moshiXuanze.this, fuwenZhanshi.class);
+                MonsterInfo tmp = (MonsterInfo)getIntent().getExtras().get("select");
+                intent.putExtra("select",tmp);
                 intent.putExtra("mode","Speed");
                 startActivity(intent);
             }
@@ -61,6 +69,8 @@ public class moshiXuanze extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(moshiXuanze.this, fuwenZhanshi.class);
+                MonsterInfo tmp = (MonsterInfo)getIntent().getExtras().get("select");
+                intent.putExtra("select",tmp);
                 intent.putExtra("mode","Free");
                 startActivity(intent);
             }
