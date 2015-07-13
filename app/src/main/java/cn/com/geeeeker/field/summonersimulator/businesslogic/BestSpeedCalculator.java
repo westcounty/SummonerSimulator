@@ -4,6 +4,7 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
+import cn.com.geeeeker.field.summonersimulator.data.Helper;
 import cn.com.geeeeker.field.summonersimulator.data.MonsterInfoData;
 import cn.com.geeeeker.field.summonersimulator.data.RuneData;
 import cn.com.geeeeker.field.summonersimulator.model.MonsterInfo;
@@ -25,10 +26,33 @@ public class BestSpeedCalculator {
 	private SingleRuneCalculator src = new SingleRuneCalculator();
 	
 	public int[] calculate(String id){
-		
-		ArrayList<Rune> runelist = rd.ReadRuneList();
-		MonsterInfoData mid = new MonsterInfoData(context_this);
-		MonsterInfo monsterinfo = mid.ReadMonsterInfo(id);
+
+        ArrayList<Rune> runelist = new ArrayList<Rune>();
+
+        Helper helper =new Helper(context_this);
+        ArrayList tmpArray2  = helper.readSer("Rune.ser");
+        Rune rrr;
+        for(Object o : tmpArray2){
+            rrr= (Rune)o;
+            runelist.add(rrr);
+        }
+
+
+        System.out.println("runelist size is "+runelist.size());
+
+        MonsterInfoData mid = new MonsterInfoData(context_this);
+        MonsterInfo monsterinfo= new MonsterInfo();
+
+        ArrayList tmpArray  = helper.readSer("monsterinfo.ser");
+
+        MonsterInfo rr;
+        for(Object o : tmpArray){
+            rr= (MonsterInfo)o;
+            if ((rr.getId().equals(id))){
+                monsterinfo=rr;
+            }
+        }
+
 		int rune1_count = 0, rune2_count = 0, rune3_count = 0, rune4_count = 0, rune5_count = 0, rune6_count = 0;
 		for (Rune r : runelist) {
 			int location = r.getLocation();

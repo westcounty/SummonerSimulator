@@ -24,7 +24,9 @@ public class moshiXuanze extends Activity {
         zuiyougongji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(moshiXuanze.this, fuwenZhanshi.class));
+                Intent intent = new Intent(moshiXuanze.this, fuwenZhanshi.class);
+                intent.putExtra("mode","Attack");
+                startActivity(intent);
             }
         });
 

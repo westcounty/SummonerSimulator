@@ -32,11 +32,22 @@ public class BestAttackCalculator {
 	
 	public int[] calculate(String id){
 		
-		ArrayList<Rune> runelist = rd.ReadRuneList();
+		ArrayList<Rune> runelist = new ArrayList<Rune>();
+
+        Helper helper =new Helper(context_this);
+        ArrayList tmpArray2  = helper.readSer("Rune.ser");
+        Rune rrr;
+        for(Object o : tmpArray2){
+            rrr= (Rune)o;
+            runelist.add(rrr);
+            }
+
+
+        System.out.println("runelist size is "+runelist.size());
+
 		MonsterInfoData mid = new MonsterInfoData(context_this);
 		MonsterInfo monsterinfo= new MonsterInfo();
 
-        Helper helper =new Helper(context_this);
         ArrayList tmpArray  = helper.readSer("monsterinfo.ser");
 
         MonsterInfo rr;
@@ -49,7 +60,7 @@ public class BestAttackCalculator {
 
 
 
-        System.out.println(monsterinfo.getId());
+        System.out.println("monsterinfo="+monsterinfo.getId());
 
 		int rune1_count = 0, rune2_count = 0, rune3_count = 0, rune4_count = 0, rune5_count = 0, rune6_count = 0;
 		for (Rune r : runelist) {
