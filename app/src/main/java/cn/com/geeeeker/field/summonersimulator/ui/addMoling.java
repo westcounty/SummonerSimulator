@@ -341,8 +341,8 @@ public class addMoling extends Activity {
             Toast.makeText(getApplicationContext(), "魔灵信息加载成功",  Toast.LENGTH_SHORT).show();
 
         }catch (Exception e){
-//            Toast.makeText(getApplicationContext(), "魔灵信息读取失败QAQ",
-//                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "魔灵信息读取失败QAQ",
+                    Toast.LENGTH_SHORT).show();
         }
 
     }

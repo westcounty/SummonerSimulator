@@ -36,7 +36,9 @@ public class moshiXuanze extends Activity {
         zuiyoutifang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(moshiXuanze.this, fuwenZhanshi.class));
+                Intent intent = new Intent(moshiXuanze.this, fuwenZhanshi.class);
+                intent.putExtra("mode","Tank");
+                startActivity(intent);
             }
         });
 
@@ -46,7 +48,9 @@ public class moshiXuanze extends Activity {
         zuiyousudu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(moshiXuanze.this, fuwenZhanshi.class));
+                Intent intent = new Intent(moshiXuanze.this, fuwenZhanshi.class);
+                intent.putExtra("mode","Speed");
+                startActivity(intent);
             }
         });
 
@@ -56,7 +60,9 @@ public class moshiXuanze extends Activity {
         ziyouzuhe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(moshiXuanze.this, fuwenZhanshi.class));
+                Intent intent = new Intent(moshiXuanze.this, fuwenZhanshi.class);
+                intent.putExtra("mode","Free");
+                startActivity(intent);
             }
         });
 

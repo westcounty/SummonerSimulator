@@ -8,11 +8,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import cn.com.geeeeker.field.summonersimulator.R;
 import cn.com.geeeeker.field.summonersimulator.businesslogic.BestAttackCalculator;
+import cn.com.geeeeker.field.summonersimulator.businesslogic.BestSpeedCalculator;
+import cn.com.geeeeker.field.summonersimulator.businesslogic.BestTankCalculator;
 import cn.com.geeeeker.field.summonersimulator.businesslogic.RuneSuitCalculator;
 import cn.com.geeeeker.field.summonersimulator.businesslogic.SingleRuneCalculator;
 import cn.com.geeeeker.field.summonersimulator.data.Helper;
@@ -244,28 +247,39 @@ public class fuwenZhanshi extends Activity {
         monster_accuracy_view = (TextView)findViewById(R.id.monster_accuracy);
 
 
-        BestAttackCalculator bestAttackCalculator = new BestAttackCalculator(fuwenZhanshi.this);
+        //判断是什么计算方式
+        String mode = (String)getIntent().getExtras().get("mode");
+        int[] result = new int[6];
+
+        if(mode.equals("Attack")){
+            BestAttackCalculator bestAttackCalculator = new BestAttackCalculator(fuwenZhanshi.this);
+            result = bestAttackCalculator.calculate("莱卡火");
+        }else if (mode.equals("Speed")){
+            BestSpeedCalculator bestSpeedCalculator = new BestSpeedCalculator(fuwenZhanshi.this);
+            result = bestSpeedCalculator.calculate("莱卡火");
+
+        }else if (mode.equals("Tank")){
+            BestTankCalculator bestTankCalculator = new BestTankCalculator(fuwenZhanshi.this);
+            result = bestTankCalculator.calculate("莱卡火");
+        }else if (mode.equals("Free")){
+            BestSpeedCalculator bestSpeedCalculator = new BestSpeedCalculator(fuwenZhanshi.this);
+            result = bestSpeedCalculator.calculate("莱卡火");
+
+        }else{
+            Toast.makeText(getApplicationContext(), "出错啦QAQ 重启试试QAQ", Toast.LENGTH_SHORT).show();
+        }
+
+
 
 
 
         SingleRuneCalculator src = new SingleRuneCalculator();
         RuneSuitCalculator rsc = new RuneSuitCalculator();
 
-        int[] result = bestAttackCalculator.calculate("莱卡火");
+
 //        int[] result={1,2,3,4,5,6};
         System.out.println("月叔叔好帅");
         monsterinfo_show= new MonsterInfo("莱卡火",11040,834,571,100,15,50,40,0);
-
-
-//        ArrayList<Monster> tmp_molingxinxi= readMonsterList();
-//        Monster tmp;
-//        for (int i=0;i<tmp_molingxinxi.size();i++){
-//            tmp=tmp_molingxinxi.get(i);
-//            if(tmp.getId().equals("岳书汉帅")){
-//                        monsterinfo_show=tmp;
-//
-//            }
-//        }
 
 
         RuneData rd = new RuneData(fuwenZhanshi.this);
